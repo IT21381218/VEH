@@ -1,0 +1,54 @@
+/* Header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Dark Blue */
+  color: #ecf0f1; /* Light Grey */
+  z-index: 1000;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+.nav-list li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ecf0f1; /* Light Grey */
+  transition: color 0.3s ease;
+}
+
+.nav-list li:hover {
+  color: #f39c12; /* Orange */
+}
+
+.nav-list li:active {
+  color: #e74c3c; /* Red */
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+  }
+
+  .nav-list li {
+    margin: 10px 5px;
+  }
+}

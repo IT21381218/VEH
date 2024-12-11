@@ -1,17 +1,23 @@
 import React from 'react';
+import './styles/Header.css';
 
-const Header = () => {
+function Header() {
+  const handleScroll = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <header>
-      <h1>My Portfolio</h1>
+    <header className="header">
       <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <ul className="nav-list">
+        <li onClick={() => handleScroll('top')}>Top</li>
+          <li onClick={() => handleScroll('about')}>About</li>
+          <li onClick={() => handleScroll('skills')}>Skills</li>
+          <li onClick={() => handleScroll('contact')}>Contact</li>
+        </ul>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

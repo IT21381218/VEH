@@ -1,0 +1,32 @@
+/* Contact.css */
+
+.contact {
+  text-align: center;
+  color: #333;
+  background-color: #fce4ec; /* Light Pink */
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #007bff; /* Blue Link */
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
