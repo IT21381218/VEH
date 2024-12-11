@@ -27,15 +27,3 @@ section {
   position: relative;
   z-index: 1; /* Ensures content appears above the video */
 }
-
-/* Optional: Style for the text in the Home section */
-section#top h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding shadow to text for better readability */
-}
-
-section#top p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
