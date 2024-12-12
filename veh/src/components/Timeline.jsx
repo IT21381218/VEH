@@ -10,7 +10,7 @@ function Timeline() {
 
   const experiences = [
     { company: 'National Development Bank PLC (NDB Bank )', role: 'Internship at Product Lifecycle Management', date: 'April 2024 - October 2024', logo: 'https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734023511/eehanee/images_fgi4f5.png' },
-    { company: 'Citizens Development Business Finance PLC', role: 'Customer Service Officer, Deposit Officer, Teller', date: '2019- 2021', logo: 'https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734023279/eehanee/picture_rloqhz.jpg' },
+    { company: 'Citizens Development Business Finance PLC', role: 'Customer Service Officer, Deposit Officer, Teller', date: 'December 2019 - August 2021', logo: 'https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734023279/eehanee/picture_rloqhz.jpg' },
     
 
   ];

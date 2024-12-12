@@ -9,7 +9,11 @@
   flex-direction: column;
   justify-content: flex-end; /* This will push the content to the bottom */
   align-items: center;
-  background-color: rgba(80, 80, 80, 0.685);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.767) 10%, /* White for the top 10% */
+    rgba(0, 0, 0, 0.623) 90% /* Gray for the bottom 90% */
+  );
   padding-bottom: 0px; /* Optional: Adds a bit of space between the text and the bottom edge */
 }
 

@@ -3,9 +3,9 @@
 .about {
   text-align: center;
   color: #333;
-  background-color: #f5f5f5; /* Lighter background for better contrast */
+  background-color: #ffffffb9; /* Lighter background for better contrast */
   width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

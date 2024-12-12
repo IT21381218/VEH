@@ -37,7 +37,14 @@ function About() {
         </div>
         <div className="about-description">
           <h1>About Me</h1>
-          <p>I am a web developer with a passion for creating amazing user experiences.</p>
+          <p>I'm an undergraduate at the Sri Lanka Institute
+of Information Technology (SLIIT) who is
+enthusiastic, self-motivated, reliable,
+responsible, and hardworking with a solid
+foundation in programming languages. I am
+seeking for a challenging role to apply my
+technical expertise and contribute to the
+innovation and efficiency of the organization.</p>
         </div>
       </div>
     </div>

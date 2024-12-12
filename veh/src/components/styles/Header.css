@@ -32,11 +32,11 @@
 }
 
 .nav-list li:hover {
-  color: #cecece; /* Orange */
+  color: #686868; /* Orange */
 }
 
 .nav-list li:active {
-  color: #dd3e3e; /* Red */
+  color: #000000; /* Red */
 }
 
 /* Responsive Styling */

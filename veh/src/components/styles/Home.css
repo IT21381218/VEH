@@ -39,6 +39,7 @@ section.slide-in {
 section:not(.slide-in) {
   opacity: 0;
   transform: translateX(100%);  /* Slide out to the right when not active */
+ 
 }
 
 /* Add responsiveness for smaller screens */
