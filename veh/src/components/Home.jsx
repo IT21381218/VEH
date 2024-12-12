@@ -3,6 +3,7 @@ import About from './About';
 import Skills from './Skills';
 import Contact from './Contact';
 import Top from './Top';
+import Timeline from './Timeline';
 import './styles/Home.css';
 
 function Home() {
@@ -10,7 +11,7 @@ function Home() {
 
   // Handle Scroll
   const handleScroll = () => {
-    const sections = ['top', 'about', 'skills', 'contact'];
+    const sections = ['top', 'about','timeline', 'skills', 'contact'];
     let current = null;
     
     sections.forEach((id) => {
@@ -64,6 +65,11 @@ function Home() {
         id="about" 
         className={currentSection === 'about' ? 'slide-in' : ''}>
         <About />
+      </section>
+      <section 
+        id="timeline" 
+        className={currentSection === 'timeline' ? 'slide-in' : ''}>
+        <Timeline />
       </section>
       <section 
         id="skills" 

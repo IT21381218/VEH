@@ -16,6 +16,7 @@ function Header() {
         <ul className="nav-list">
           <li onClick={() => handleClick('top')}>Top</li>
           <li onClick={() => handleClick('about')}>About</li>
+          <li onClick={() => handleClick('timeline')}>Experiences</li>
           <li onClick={() => handleClick('skills')}>Skills</li>
           <li onClick={() => handleClick('contact')}>Contact</li>
         </ul>

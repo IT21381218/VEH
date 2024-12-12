@@ -1,0 +1,190 @@
+/* General Styles */
+.timeline {
+    background-color: #f5f5f5;
+    padding: 1rem ;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+
+  }
+  
+  .timeline-title {
+    text-align: center;
+    font-size: 7rem;
+    margin-bottom: 3rem;
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  
+  .timeline-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline Container */
+  .timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+
+  }
+  
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #d3d3d3;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    display: flex;
+    position: relative;
+    margin: 2rem 0;
+    z-index: 1;
+  }
+  
+  .timeline-item.left {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-item.right {
+    flex-direction: row;
+  }
+  
+  .timeline-dot {
+    width: 40px;  /* Adjust size to fit the logo */
+    height: 40px; /* Adjust size to fit the logo */
+    border-radius: 50%; /* Maintain circle shape */
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-dot img {
+    width: 100%;   /* Ensure the logo fills the dot */
+    height: 100%;  /* Ensure the logo fills the dot */
+    border-radius: 50%;  /* Optional: Keeps logo round */
+    z-index: 10;
+  }
+  
+  /* Timeline Content */
+  .timeline-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 40%;
+    z-index: 2;
+
+  }
+  
+  .timeline-item.left .timeline-content {
+    margin-left: 20px;
+  }
+  
+  .timeline-item.right .timeline-content {
+    margin-right: 20px;
+  }
+  
+  .timeline-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-family: lable;
+    font-weight: bold;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555555;
+    font-family: lable;
+    font-weight: bold;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    color: #777777;
+    font-family: lable;
+    font-weight: bold;
+  }
+  
+  /* Scroll Animations */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  [data-aos="fade-up"] {
+    transform: translateY(40px);
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container::before {
+      left: 15px;
+    }
+  
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .timeline-dot {
+      left: 15px;
+      top: 10px;
+    }
+  
+    .timeline-content {
+      width: calc(100% - 40px);
+      margin: 0 20px;
+    }
+  
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline-title {
+      font-size: 2rem;
+    }
+  
+    .timeline-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .timeline-content h4 {
+      font-size: 1rem;
+    }
+  
+    .timeline-content p {
+      font-size: 0.9rem;
+    }
+  }
