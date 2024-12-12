@@ -21,7 +21,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure each section takes up full screen */
   padding: 0;
   color: white;
   position: relative;

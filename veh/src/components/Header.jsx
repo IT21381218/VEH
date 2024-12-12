@@ -3,7 +3,11 @@ import './styles/Header.css';
 
 function Header() {
   const handleClick = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    const targetSection = document.getElementById(id);
+    window.scrollTo({
+      top: targetSection.offsetTop - 0, // Adjust for header height if needed
+      behavior: 'smooth',
+    });
   };
 
   return (

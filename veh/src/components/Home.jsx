@@ -30,7 +30,11 @@ function Home() {
 
   // Scroll to the section when clicked
   const handleClick = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    const targetSection = document.getElementById(id);
+    window.scrollTo({
+      top: targetSection.offsetTop - 60, // Adjust for header height if needed
+      behavior: 'smooth',
+    });
   };
 
   // Add scroll event listener
