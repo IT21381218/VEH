@@ -39,17 +39,47 @@
   color: #dd3e3e; /* Red */
 }
 
-/* Optional: Add responsiveness for smaller screens */
+/* Responsive Styling */
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 1.5rem; /* Reduce padding for medium screens */
+  }
+
+  .nav-list li {
+    margin: 12px 10px;
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 0 1rem;
   }
 
   .nav-list {
-    flex-wrap: wrap;
+    justify-content: space-around; /* Space out navigation items */
   }
 
   .nav-list li {
-    margin: 10px 5px;
+    margin: 10px 8px;
+    font-size: 0.85rem; /* Further reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 0.5rem;
+  }
+
+  .nav-list {
+    flex-direction: row; /* Keep navigation items inline */
+    justify-content: space-around;
+    height: auto;
+  }
+
+  .nav-list li {
+    margin: 10px 8px; /* Adjust spacing between items */
+    font-size: 1rem; /* Restore font size for better readability */
   }
 }
