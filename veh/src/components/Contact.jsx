@@ -35,24 +35,43 @@ function Contact() {
       {/* Right Side: Contact Form */}
       <div className="contact-right">
         <form className="contact-form" onSubmit={handleSubmit}>
-          <input type="text" name="user_name" placeholder="Your Name" required />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-          />
-          <input
-            type="text"
-            name="topic"
-            placeholder="Subject / Topic"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <div className="input-group">
+            <label htmlFor="user_name">Name</label>
+            <input type="text" id="user_name" name="user_name" placeholder="Enter your name" required />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="user_email">Email</label>
+            <input
+              type="email"
+              id="user_email"
+              name="user_email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="topic">Subject / Topic</label>
+            <input
+              type="text"
+              id="topic"
+              name="topic"
+              placeholder="Subject / Topic"
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+
           <button type="submit">Send Message</button>
 
           {/* Show notification */}

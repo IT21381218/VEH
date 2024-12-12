@@ -9,11 +9,11 @@
   flex-direction: column;
   justify-content: flex-end; /* This will push the content to the bottom */
   align-items: center;
-  background-color: rgba(80, 80, 80, 0.425);
+  background-color: rgba(80, 80, 80, 0.685);
   padding-bottom: 0px; /* Optional: Adds a bit of space between the text and the bottom edge */
 }
 
 .top h1 {
-  font-size: 17rem;
+  font-size: 20rem;
   margin: 0; /* Removes any default margin for precise positioning */
 }

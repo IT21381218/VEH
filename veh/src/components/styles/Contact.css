@@ -7,6 +7,7 @@
   background-color: #ffffff;
   color: #000000;
   box-sizing: border-box;
+  padding: 0; /* Remove padding from the container */
 }
 
 /* Left Section (Text) */
@@ -15,18 +16,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 6rem;
   background-color: #ffffff;
 }
 
 .contact-left h1 {
-  font-size: 10rem;
+  font-size: 11rem;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: bold;
   margin: 0;
   text-align: left; /* Align text to the left */
+  letter-spacing: 0.05em;
 }
 
 /* Right Section (Form) */
@@ -35,7 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 .contact-form {
@@ -43,19 +44,48 @@
   flex-direction: column;
   width: 100%;
   max-width: 400px;
-  gap: 1rem;
+  gap: 1rem; /* Space between form elements */
+  padding: 1rem; /* Padding around the form */
+  box-sizing: border-box;
+  align-items: stretch; /* Ensure all child elements stretch to full width */
+}
+
+/* Input Group Styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Space between label and input */
+}
+
+
+.input-group ::placeholder {
+  font-size: 1rem;
+  color: #888888;
+  font-family: lable;
+  font-weight: bold;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #202020;
+  font-family: lable;
+  font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  font-family: lable;
+  width: 100%; /* Ensure full width */
   padding: 0.8rem;
   font-size: 1rem;
   border: 2px solid #000000;
   border-radius: 8px;
   background-color: #ffffff;
-  color: #000000;
+  color: #202020;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: lable;
+  font-weight: bold;
 }
 
 .contact-form textarea {
@@ -69,7 +99,9 @@
   outline: none;
 }
 
+/* Button Styling */
 .contact-form button {
+  width: 100%; /* Make the button the same width as the inputs */
   padding: 0.8rem;
   font-size: 1.2rem;
   background-color: #000000;
@@ -78,18 +110,20 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: lable;
 }
 
 .contact-form button:hover {
   background-color: #333333;
 }
 
+/* Notification Styling */
 .notification {
-  margin-top: 1.5rem;
+  margin-top: 1rem; /* Reduced margin for better spacing */
   padding: 0.8rem;
   font-size: 1rem;
   border-radius: 8px;
-  max-width: 400px;
   text-align: center;
 }
 
@@ -97,10 +131,16 @@
   background-color: #e0ffe0;
   color: #007700;
   border: 2px solid #007700;
+  font-family: lable;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .notification.error {
   background-color: #ffe0e0;
   color: #770000;
   border: 2px solid #770000;
+  font-family: lable;
+  font-weight: bold;
+  font-size: 1rem;
 }
