@@ -1,7 +1,7 @@
 .skills {
   text-align: center;
   color: #fff;
-  background: transparent;
+  background: #808080c0;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.skill-box {
+/* .skill-box {
   max-height: 80vh;
   background-color: #ff0000bd;
   display: flex;
@@ -21,6 +21,20 @@
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 80%;
+  overflow: hidden;
+} */
+
+
+.skill-box {
+  min-height: 100vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 90%;
   overflow: hidden; /* Prevent content overflow */
 }
 
@@ -35,7 +49,7 @@
 
 .skills-list {
   display: flex; /* Flexbox for horizontal scrolling */
-  gap: 2rem; /* Add space between items */
+  gap: 1rem; /* Add space between items */
   overflow-x: auto; /* Enable horizontal scrolling */
   width: 100%; /* Make the list span the full width of the container */
   padding-bottom: 1rem; /* Add padding to prevent cutoff */

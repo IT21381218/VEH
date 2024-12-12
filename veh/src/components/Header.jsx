@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Header.css';
 
 function Header() {
-  const handleScroll = (id) => {
+  const handleClick = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -10,10 +10,10 @@ function Header() {
     <header className="header">
       <nav>
         <ul className="nav-list">
-        <li onClick={() => handleScroll('top')}>Top</li>
-          <li onClick={() => handleScroll('about')}>About</li>
-          <li onClick={() => handleScroll('skills')}>Skills</li>
-          <li onClick={() => handleScroll('contact')}>Contact</li>
+          <li onClick={() => handleClick('top')}>Top</li>
+          <li onClick={() => handleClick('about')}>About</li>
+          <li onClick={() => handleClick('skills')}>Skills</li>
+          <li onClick={() => handleClick('contact')}>Contact</li>
         </ul>
       </nav>
     </header>

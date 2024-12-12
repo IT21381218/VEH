@@ -31,7 +31,7 @@ function Skills() {
   return (
     <div className="skills">
       <div className="skill-box">
-        <h1>My Skills</h1>
+        <h1>SKILLS</h1>
         <div className="skills-list" ref={scrollRef}>
           <div className="skill-item">
             <FaReact className="skill-icon react" />
