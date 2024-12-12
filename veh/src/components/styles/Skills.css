@@ -1,28 +1,116 @@
-/* Skills.css */
-
 .skills {
   text-align: center;
   color: #fff;
-  background: linear-gradient(to bottom, #56ccf2, #2f80ed); /* Blue Gradient */
-  padding: 2rem;
+  background: transparent;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.skill-box {
+  max-height: 80vh;
+  background-color: #ff0000bd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  overflow: hidden; /* Prevent content overflow */
+}
+
 .skills h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.skills-list {
+  display: flex; /* Flexbox for horizontal scrolling */
+  gap: 2rem; /* Add space between items */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%; /* Make the list span the full width of the container */
+  padding-bottom: 1rem; /* Add padding to prevent cutoff */
+  scrollbar-width: thin; /* Make scrollbar thinner (Firefox) */
+  scrollbar-color: #fff rgba(255, 255, 255, 0.1); /* Custom scrollbar colors */
+}
+
+/* Custom scrollbar for Webkit browsers */
+.skills-list::-webkit-scrollbar {
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+.skills-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.skills-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.skill-item {
+  position: relative; /* Needed for the pseudo-element positioning */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.2); /* Existing border */
+  padding: 2rem; /* Increase padding for larger items */
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 150px; /* Ensure items are big enough */
+  max-width: 200px; /* Optional: Limit the maximum size */
+  height: 200px;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 8px; /* Adjust spacing from the edges */
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid black; /* Black inner border */
+  border-radius: 3px; /* Match the border-radius of the item */
+  pointer-events: none; /* Prevent the pseudo-element from interfering with hover effects */
+}
+
+.skill-icon {
+  font-size: 4rem; /* Increase icon size */
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  color: black;
 }
 
-.skills ul {
-  list-style-type: none;
-  padding: 0;
+.skill-item span {
+  font-size: 1.5rem; /* Increase text size */
+  color: #000000;
+  text-transform: capitalize;
 }
 
-.skills li {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .skill-item {
+    padding: 1rem;
+    min-width: 120px; /* Adjust size for smaller screens */
+  }
+
+  .skill-icon {
+    font-size: 3rem; /* Adjust icon size */
+  }
+
+  .skill-item span {
+    font-size: 1.2rem; /* Adjust text size */
+  }
 }
