@@ -8,7 +8,6 @@
   background-color: transparent; /* Dark Blue */
   color: #ecf0f1; /* Light Grey */
   z-index: 1000;
-  padding: 0 2rem;
 }
 
 .nav-list {
@@ -44,7 +43,7 @@
 /* For screens with max-width: 1200px */
 @media (max-width: 1200px) {
   .header {
-    padding: 0 1.5rem; /* Reduce padding for medium screens */
+    padding: 0 0; /* Reduce padding for medium screens */
   }
 
   .nav-list li {
@@ -56,7 +55,7 @@
 /* For screens with max-width: 768px */
 @media (max-width: 768px) {
   .header {
-    padding: 0 1rem; /* Further reduce padding */
+    padding: 0 0;/* Further reduce padding */
   }
 
   .nav-list {
@@ -72,7 +71,7 @@
 /* For screens with max-width: 480px */
 @media (max-width: 480px) {
   .header {
-    padding: 0 0.5rem; /* Reduce padding even further */
+    padding: 0 0; /* Reduce padding even further */
   }
 
   .nav-list {

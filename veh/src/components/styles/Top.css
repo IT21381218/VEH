@@ -42,6 +42,6 @@
 
 @media (max-width: 480px) {
   .top h1 {
-    font-size: 6rem; /* Smaller font size for mobile screens */
+    font-size: 5.5rem; /* Smaller font size for mobile screens */
   }
 }
