@@ -15,8 +15,10 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  transition: height 0.3s ease;
 }
 
+/* Section styles */
 section {
   display: flex;
   align-items: center;
@@ -39,12 +41,72 @@ section.slide-in {
 section:not(.slide-in) {
   opacity: 0;
   transform: translateX(100%);  /* Slide out to the right when not active */
- 
 }
 
-/* Add responsiveness for smaller screens */
-@media (max-width: 768px) {
+/* Max-width 1200px */
+@media (max-width: 1200px) {
+  .background-video {
+    height: 80vh;  /* Reduce the video height on medium screens */
+  }
+
   section {
-    min-height: 100vh;
+    min-height: 80vh;  /* Adjust the section height */
+    padding: 20px; /* Add some padding */
+  }
+
+  section .content {
+    width: 90%; /* Make content take more space */
+  }
+}
+
+/* Max-width 768px */
+@media (max-width: 768px) {
+  .background-video {
+    height: 60vh;  /* Further reduce video height */
+  }
+
+  section {
+    min-height: 70vh;  /* Adjust the section height for smaller screens */
+    padding: 15px;
+  }
+
+  section .content {
+    width: 95%; /* Content takes almost full width */
+    padding: 0 10px; /* Reduced padding for smaller screens */
+  }
+
+  /* Adjust text size */
+  section h1, section h2, section h3 {
+    font-size: 1.5rem; /* Reduced font size */
+  }
+
+  section p {
+    font-size: 1rem; /* Adjust paragraph text size */
+  }
+}
+
+/* Max-width 480px */
+@media (max-width: 480px) {
+  .background-video {
+    height: 50vh;  /* Reduce video height even more */
+  }
+
+  section {
+    min-height: 60vh;  /* Further reduce the section height */
+    padding: 10px;
+  }
+
+  section .content {
+    width: 100%; /* Full width for content */
+    padding: 0 5px; /* Minimal padding */
+  }
+
+  /* Adjust text size */
+  section h1, section h2, section h3 {
+    font-size: 1.2rem; /* Further reduced font size */
+  }
+
+  section p {
+    font-size: 0.9rem; /* Adjust paragraph text size */
   }
 }
