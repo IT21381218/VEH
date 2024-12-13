@@ -7,7 +7,7 @@ function About() {
     <div className="about">
       {/* Top Section */}
       <div className="about-top" style={{ height: '70vh' }}>
-        <h1>About Me</h1>
+        <h1>ABOUT ME</h1>
       </div>
 
       {/* Bottom Section */}
@@ -43,7 +43,7 @@ function About() {
             foundation in programming languages. I am seeking a challenging role to apply my
             technical expertise and contribute to the innovation and efficiency of the organization.
           </p>
-          <a href="/path-to-your-cv.pdf" download className="download-cv-button">Download CV</a>
+          <a href="/V.E. Hettiarachchi_Resume.pdf" download className="download-cv-button">Download CV</a>
         </div>
       </div>
     </div>

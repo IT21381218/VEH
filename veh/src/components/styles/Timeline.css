@@ -1,17 +1,22 @@
 /* General Styles */
 .timeline {
     background-color: #ffffffb9;
-
     color: #333;
     font-family: 'Arial', sans-serif;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 3rem 0; /* Add more padding at the top for mobile */
 }
 
+/* Timeline Title */
 .timeline-title {
     text-align: center;
-    font-size: 7rem;
-    margin-bottom: 3rem;
+    font-size: 5rem; /* Adjusted for mobile */
+    margin-bottom: 2rem;
     color: #000000;
     position: relative;
     overflow: hidden;
@@ -34,7 +39,9 @@
 .timeline-container {
     position: relative;
     max-width: 900px;
+    width: 100%; /* Ensure it takes full width */
     margin: 0 auto;
+    padding: 0 20px; /* Add padding for responsiveness */
 }
 
 .timeline-container::before {
@@ -55,6 +62,13 @@
     position: relative;
     margin: 2rem 0;
     z-index: 1;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px); /* Slight hover effect */
 }
 
 .timeline-item.left {
@@ -88,10 +102,11 @@
 .timeline-content {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.678);
+    padding: 1rem 1.5rem; /* Reduced padding for a more compact card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow for mobile */
     position: relative;
-    width: 40%;
+    width: 100%; /* Full width on mobile */
+    max-width: 350px; /* Reduce max-width to make it smaller */
     z-index: 2;
     border: 2px solid #000000; /* Added border */
     margin-left: -20px;
@@ -107,7 +122,7 @@
 }
 
 .timeline-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Reduced font size */
     margin-bottom: 0.5rem;
     color: #2c3e50;
     font-family: lable;
@@ -115,7 +130,7 @@
 }
 
 .timeline-content h4 {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced font size */
     margin-bottom: 1rem;
     color: #555555;
     font-family: lable;
@@ -123,7 +138,7 @@
 }
 
 .timeline-content p {
-    font-size: 1rem;
+    font-size: 0.8rem; /* Slightly smaller text */
     color: #777777;
     font-family: lable;
     font-weight: bold;
@@ -207,10 +222,11 @@
 @media (max-width: 480px) {
     .timeline-title {
         font-size: 2rem; /* Adjusted font size for mobile */
+        margin-bottom: 1.5rem; /* Reduced margin for better spacing */
     }
 
     .timeline-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem; /* Adjusted font size */
     }
 
     .timeline-content h4 {
@@ -218,7 +234,7 @@
     }
 
     .timeline-content p {
-        font-size: 0.9rem;
+        font-size: 0.8rem; /* Slightly smaller text */
     }
 
     .timeline-content {

@@ -41,6 +41,7 @@
 
 /* Responsive Styling */
 
+/* For screens with max-width: 1200px */
 @media (max-width: 1200px) {
   .header {
     padding: 0 1.5rem; /* Reduce padding for medium screens */
@@ -52,13 +53,14 @@
   }
 }
 
+/* For screens with max-width: 768px */
 @media (max-width: 768px) {
   .header {
-    padding: 0 1rem;
+    padding: 0 1rem; /* Further reduce padding */
   }
 
   .nav-list {
-    justify-content: space-around; /* Space out navigation items */
+    justify-content: center; /* Keep items centered */
   }
 
   .nav-list li {
@@ -67,19 +69,21 @@
   }
 }
 
+/* For screens with max-width: 480px */
 @media (max-width: 480px) {
   .header {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem; /* Reduce padding even further */
   }
 
   .nav-list {
     flex-direction: row; /* Keep navigation items inline */
-    justify-content: space-around;
-    height: auto;
+    justify-content: center; /* Center the items */
+    height: auto; /* Remove fixed height */
+    padding: 10px 0; /* Add padding for better spacing */
   }
 
   .nav-list li {
-    margin: 10px 8px; /* Adjust spacing between items */
+    margin: 8px 10px; /* Adjust spacing between items */
     font-size: 1rem; /* Restore font size for better readability */
   }
 }
