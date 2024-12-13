@@ -130,7 +130,7 @@
 
   .skills-list {
     gap: 1.5rem; /* Reduce gap between skill items */
-    padding: 0.5rem; /* Adjust padding */
+    padding: 1rem; /* Adjust padding */
   }
 
   .skill-item {
@@ -156,7 +156,7 @@
 
   .skills-list {
     gap: 1rem; /* Reduce gap between skill items */
-    padding: 0.5rem; /* Adjust padding */
+    padding: 1rem; /* Adjust padding */
   }
 
   .skill-item {
@@ -177,7 +177,7 @@
 /* Responsive Design for max-width: 480px */
 @media (max-width: 480px) {
   .skills {
-    padding: 0.5rem; /* Add padding to avoid sticking to edges */
+    padding: 0rem; /* Add padding to avoid sticking to edges */
   }
 
   .skills h1 {
@@ -187,7 +187,7 @@
 
   .skills-list {
     gap: 0.5rem; /* Reduce gap further */
-    padding: 0.5rem; /* Adjust padding */
+    padding: 1rem; /* Adjust padding */
   }
 
   .skill-item {
