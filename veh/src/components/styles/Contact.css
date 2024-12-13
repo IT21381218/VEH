@@ -1,15 +1,14 @@
 /* General Styling */
 .contact {
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
   width: 100%;
-
   color: #000000;
   box-sizing: border-box;
   padding: 0; /* Remove padding from the container */
 }
-
 
 /* Left Section (Text) */
 .contact-left {
@@ -25,7 +24,6 @@
   font-size: 11rem;
   color: #000000;
   text-transform: uppercase;
-  
   margin: 0;
   text-align: left;
 }
@@ -142,19 +140,10 @@
   font-weight: bold;
 }
 
-/* Responsive Styling */
+/* Media Queries */
 @media (max-width: 1200px) {
   .contact-left h1 {
     font-size: 8rem;
-    text-align: center; /* Center text for medium screens */
-  }
-
-  .contact {
-    flex-direction: row;
-  }
-
-  .contact-left {
-    padding: 4rem;
   }
 
   .contact-right {
@@ -164,17 +153,16 @@
 
 @media (max-width: 768px) {
   .contact {
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column;
   }
 
   .contact-left {
-    flex: none;
-    padding: 2rem;
-    text-align: center;
+    padding: 4rem;
   }
 
   .contact-left h1 {
     font-size: 6rem;
+    text-align: center;
   }
 
   .contact-right {
@@ -182,34 +170,37 @@
   }
 
   .contact-form {
-    max-width: 100%;
+    max-width: 350px;
   }
 }
 
 @media (max-width: 480px) {
+  .contact-left {
+    padding: 2rem;
+  }
+
   .contact-left h1 {
     font-size: 4rem;
-    line-height: 1.2;
+    text-align: center;
+  }
+
+  .contact-right {
+    padding: 0.5rem;
   }
 
   .contact-form {
-    padding: 0.5rem;
-    gap: 0.5rem;
+    max-width: 300px;
+    gap: 0.8rem;
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 0.5rem;
     font-size: 0.9rem;
+    padding: 0.6rem;
   }
 
   .contact-form button {
-    padding: 0.6rem;
     font-size: 1rem;
-  }
-
-  .notification {
-    font-size: 0.9rem;
     padding: 0.6rem;
   }
 }
