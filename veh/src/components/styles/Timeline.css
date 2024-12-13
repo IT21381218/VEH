@@ -110,7 +110,7 @@
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #2c3e50;
-    font-family: label;
+    font-family: lable;
     font-weight: bold;
 }
 
@@ -118,14 +118,14 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #555555;
-    font-family: label;
+    font-family: lable;
     font-weight: bold;
 }
 
 .timeline-content p {
     font-size: 1rem;
     color: #777777;
-    font-family: label;
+    font-family: lable;
     font-weight: bold;
 }
 

@@ -1,50 +1,49 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './styles/About.css';
+import Typewriter from 'typewriter-effect';
 
 function About() {
-  const aboutContentRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            aboutContentRef.current.classList.add('visible');
-          } else {
-            aboutContentRef.current.classList.remove('visible');
-          }
-        });
-      },
-      { threshold: 0.5 } // Trigger the animation when 50% of the content is visible
-    );
-
-    if (aboutContentRef.current) {
-      observer.observe(aboutContentRef.current);
-    }
-
-    return () => {
-      if (aboutContentRef.current) {
-        observer.unobserve(aboutContentRef.current);
-      }
-    };
-  }, []);
-
   return (
     <div className="about">
-      <div className="about-content" ref={aboutContentRef}>
-        <div className="about-image">
-          <img src="https://res.cloudinary.com/dwcxwpn7q/image/upload/v1733945742/eehanee/20231111_133032_mqdz8r.jpg" alt="About Me" />
+      {/* Top Section */}
+      <div className="about-top" style={{ height: '70vh' }}>
+        <h1>About Me</h1>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="about-bottom">
+        {/* Left Side */}
+        <div className="about-left">
+          <img 
+            src="https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734070521/eehanee/Untitled-1_qk1pxt.png" 
+            alt="About Me" 
+          />
         </div>
-        <div className="about-description">
-          <h1>About Me</h1>
-          <p>I'm an undergraduate at the Sri Lanka Institute
-of Information Technology (SLIIT) who is
-enthusiastic, self-motivated, reliable,
-responsible, and hardworking with a solid
-foundation in programming languages. I am
-seeking for a challenging role to apply my
-technical expertise and contribute to the
-innovation and efficiency of the organization.</p>
+
+        {/* Right Side */}
+        <div className="about-right">
+          <h1>Hi, I'm Eehanee Hettiarachchi</h1>
+          <h3>
+            And I'm a {""}
+            <span>
+              <Typewriter
+                options={{
+                  strings: ['Web Developer', 'Customer Service Officer', 'Project Manager' ,'UI/UX Designer'],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </span>
+          </h3>
+          <p>
+            I'm an undergraduate at the Sri Lanka Institute of Information Technology (SLIIT) who is
+            enthusiastic, self-motivated, reliable, responsible, and hardworking with a solid
+            foundation in programming languages. I am seeking a challenging role to apply my
+            technical expertise and contribute to the innovation and efficiency of the organization.
+          </p>
+          <a href="/path-to-your-cv.pdf" download className="download-cv-button">Download CV</a>
         </div>
       </div>
     </div>
