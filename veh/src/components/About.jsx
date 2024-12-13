@@ -28,7 +28,7 @@ function About() {
             <span>
               <Typewriter
                 options={{
-                  strings: ['Web Developer', 'Customer Service Officer', 'Project Manager' ,'UI/UX Designer'],
+                  strings: ['Quality Assurance Tester', 'Customer Service Officer', 'Project Manager' ,'UI/UX Designer' , 'Business Analyst'],
                   autoStart: true,
                   loop: true,
                   delay: 75,
