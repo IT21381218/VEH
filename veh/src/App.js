@@ -8,10 +8,7 @@
 
 //   useEffect(() => {
 //     const handleLoad = () => {
-//       // Add a delay of 2 seconds (2000ms) before hiding the loading screen
-//       setTimeout(() => {
-//         setIsLoading(false);
-//       }, 5000); // Adjust this time to make the loading screen appear longer
+//       setIsLoading(false);
 //     };
 
 //     if (document.readyState === 'complete') {
@@ -40,6 +37,8 @@
 // }
 
 // export default App;
+
+
 
 
 
@@ -85,3 +84,5 @@ function App() {
 }
 
 export default App;
+
+
