@@ -1,14 +1,31 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react"; // Import useEffect here
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import './styles/Projects.css';
 
 const SECTION_HEIGHT = 1500;
 
 const Projects = () => {
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="projects-container">
+      <HomeNavigation />
       <Hero />
       <ProjectsDetails />
+    </div>
+  );
+};
+
+const HomeNavigation = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="home-navigation" onClick={() => navigate("/")}>
+      Home
     </div>
   );
 };

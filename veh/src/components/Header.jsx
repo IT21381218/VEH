@@ -1,13 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './styles/Header.css';
 
 function Header() {
+  const navigate = useNavigate(); // Initialize navigate
+
   const handleClick = (id) => {
     const targetSection = document.getElementById(id);
-    window.scrollTo({
-      top: targetSection.offsetTop - 0, // Adjust for header height if needed
-      behavior: 'smooth',
-    });
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 0, // Adjust for header height if needed
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -19,6 +24,7 @@ function Header() {
           <li onClick={() => handleClick('timeline')}>Experiences</li>
           <li onClick={() => handleClick('skills')}>Skills</li>
           <li onClick={() => handleClick('contact')}>Contact</li>
+          <li onClick={() => navigate('/projects')}>Projects</li> {/* Use navigate here */}
         </ul>
       </nav>
     </header>
