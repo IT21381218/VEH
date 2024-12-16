@@ -84,14 +84,14 @@ const ParallaxImages = () => {
         className="parallax-img img-left"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734375943/eehanee/807900008838988707_g6kwsc.png"
         alt="Spacecraft"
         start={200}
         end={-250}
         className="parallax-img img-center"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734376057/eehanee/807900687443833199_pcefbw.png"
         alt="Satellite"
         start={-200}
         end={200}
