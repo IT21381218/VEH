@@ -173,8 +173,8 @@ const ProjectsDetails = () => {
           >
             <motion.button
               className="project-link-button"
-              whileHover={{ scale: 1.1, backgroundColor: "#5aafff" }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ backgroundColor: "#474747" , color:"#ffff"}}
+              transition={{ duration: 0.1 }}
             >
               Visit Project
             </motion.button>

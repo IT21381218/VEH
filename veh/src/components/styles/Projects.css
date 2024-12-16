@@ -152,21 +152,15 @@ body {
   
   .project-link-button {
     padding: 12px 25px;
-    background-color: #4c92ff;
-    border: none;
+    background-color: #ffffff;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-family: lable;
-  }
-  
-  .project-link-button:hover {
-    background-color: #3571cc;
-    transform: scale(1.1);
   }
   
   /* Animations */
