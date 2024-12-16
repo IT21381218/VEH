@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from './Header';
 import About from './About';
 import Skills from './Skills';
 import Contact from './Contact';
@@ -11,25 +12,25 @@ function Home() {
 
   // Handle Scroll
   const handleScroll = () => {
-    const sections = ['top', 'about','timeline', 'skills', 'contact'];
+    const sections = ['top', 'about', 'timeline', 'skills', 'contact'];
     let current = null;
-    
+
     sections.forEach((id) => {
       const section = document.getElementById(id);
-      const rect = section.getBoundingClientRect();
-      
-      // Check if the section is in the viewport
-      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 4) {
-        current = id;
+      if (section) { // Check if the section exists
+        const rect = section.getBoundingClientRect();
+
+        // Check if the section is in the viewport
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 4) {
+          current = id;
+        }
       }
     });
-    
+
     if (current !== currentSection) {
       setCurrentSection(current);
     }
   };
-
-
 
   // Add scroll event listener
   useEffect(() => {
@@ -41,6 +42,9 @@ function Home() {
 
   return (
     <div className="home">
+      {/* Add Header at the top */}
+      <Header />
+
       <video autoPlay loop muted className="background-video">
         <source 
           src="https://res.cloudinary.com/dwcxwpn7q/video/upload/v1733940890/eehanee/1_xuwm2i.mov" 

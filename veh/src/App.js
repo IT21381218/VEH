@@ -40,11 +40,10 @@
 
 
 
-
-
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import Projects from './components/Projects';
 import Loading from './components/Loading';
 
 function App() {
@@ -52,10 +51,9 @@ function App() {
 
   useEffect(() => {
     const handleLoad = () => {
-      // Add a delay of 2 seconds (2000ms) before hiding the loading screen
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000); // Adjust this time to make the loading screen appear longer
+      }, 2000);
     };
 
     if (document.readyState === 'complete') {
@@ -74,15 +72,15 @@ function App() {
       {isLoading ? (
         <Loading />
       ) : (
-        <div>
-          <Header />
-          <Home />
-        </div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </Router>
       )}
     </>
   );
 }
 
 export default App;
-
-
