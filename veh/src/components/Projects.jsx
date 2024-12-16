@@ -97,6 +97,7 @@ const ParallaxImages = () => {
         end={200}
         className="parallax-img img-right"
       />
+      
     </div>
   );
 };
