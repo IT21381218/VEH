@@ -72,15 +72,15 @@ body {
   
   .parallax-img.img-left,
   .parallax-img.img-right {
-    width: 30%;
+    width: 33%;
   }
   
   .parallax-img.img-center {
-    width: 30%;
+    width: 33%;
   }
   
   .parallax-img.img-left-wide {
-    width: 30%;
+    width: 33%;
   }
   
   .parallax-img:hover {
@@ -213,11 +213,11 @@ body {
   
     .parallax-img.img-left,
     .parallax-img.img-right {
-      width: 30%;
+      width: 33%;
     }
   
     .parallax-img.img-center {
-      width: 40%;
+      width: 33%;
     }
   
     .projects-details {
