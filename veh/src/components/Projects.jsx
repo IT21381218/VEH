@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"; // Import useEffect here
+import React, { useEffect, useRef, useState } from "react"; 
 import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import './styles/Projects.css';
@@ -13,6 +13,7 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
+      <CustomCursor />
       <HomeNavigation />
       <Hero />
       <ProjectsDetails />
@@ -20,11 +21,45 @@ const Projects = () => {
   );
 };
 
-const HomeNavigation = () => {
-  const navigate = useNavigate();
+const CustomCursor = () => {
+  const cursorRef = useRef(null);
+  const [hovering, setHovering] = useState(false);
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${e.clientX}px`;
+        cursorRef.current.style.top = `${e.clientY}px`;
+      }
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, []);
 
   return (
-    <div className="home-navigation" onClick={() => navigate("/")}>
+    <div
+      ref={cursorRef}
+      className={`custom-cursor ${hovering ? "hovering" : ""}`}
+    >
+      <span className={`cursor-text ${hovering ? "visible" : ""}`}>
+        Scroll Down
+      </span>
+    </div>
+  );
+};
+
+const HomeNavigation = () => {
+  const navigate = useNavigate();
+  const [hovering, setHovering] = useState(false); // Add state for hovering
+
+  return (
+    <div
+      className="home-navigation"
+      onMouseEnter={() => setHovering(true)} // Set hovering state to true on mouse enter
+      onMouseLeave={() => setHovering(false)} // Set hovering state to false on mouse leave
+      onClick={() => navigate("/")}
+    >
       <p>Home</p>
     </div>
   );
@@ -32,7 +67,11 @@ const HomeNavigation = () => {
 
 const Hero = () => {
   return (
-    <div className="hero-section">
+    <div
+      className="hero-section"
+      onMouseEnter={() => document.querySelector(".custom-cursor").classList.add("hovering")}
+      onMouseLeave={() => document.querySelector(".custom-cursor").classList.remove("hovering")}
+    >
       <CenterImage />
       <ParallaxImages />
       <div className="gradient-overlay" />
@@ -97,7 +136,6 @@ const ParallaxImages = () => {
         end={200}
         className="parallax-img img-right"
       />
-      
     </div>
   );
 };

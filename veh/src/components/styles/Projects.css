@@ -9,7 +9,7 @@ body {
     background-color: #000000;
   }
   
-  .home-navigation p{
+  .home-navigation p {
     position: fixed;
     top: 20px; /* Distance from the top */
     left: 50%; /* Center horizontally */
@@ -22,11 +22,10 @@ body {
     font-family: lable;
     font-size: 1rem;
   }
-
+  
   .home-navigation p:hover {
     color: #cfcfcf; /* Orange */
   }
-  
   
   /* Hero Section */
   .hero-section {
@@ -238,8 +237,6 @@ body {
       width: 48%;
     }
   
-
-  
     .projects-details {
       padding: 4% 3%;
       grid-template-columns: 1fr 1fr;
@@ -256,6 +253,10 @@ body {
     .project-link-button {
       padding: 10px 18px;
       font-size: 0.85rem;
+    }
+  
+    .home-navigation p {
+      font-size: 1rem;
     }
   }
   
@@ -283,9 +284,46 @@ body {
       font-size: 0.8rem;
     }
   
-    .home-navigation {
+    .home-navigation p {
       font-size: 1.2rem;
       padding: 8px 16px;
     }
+  }
+  
+  /* Custom Cursor */
+  .custom-cursor {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    pointer-events: none; /* Prevent blocking interactions */
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    opacity: 0;
+  }
+  
+  .custom-cursor.hovering {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  
+  /* Cursor text styles */
+  .cursor-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-family: lable;
+    text-transform: uppercase;
+    opacity: 0; /* Default hidden */
+    transition: opacity 0.2s ease-out;
+  }
+  
+  .custom-cursor.hovering .cursor-text {
+    opacity: 1; /* Show when hovering */
   }
   
