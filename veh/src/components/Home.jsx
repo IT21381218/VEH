@@ -8,6 +8,11 @@ import Timeline from './Timeline';
 import './styles/Home.css';
 
 function Home() {
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+   }, []);
+
   const [currentSection, setCurrentSection] = useState('top');
 
   // Handle Scroll
