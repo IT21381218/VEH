@@ -77,7 +77,7 @@ const ParallaxImages = () => {
   return (
     <div className="parallax-images">
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://res.cloudinary.com/dwcxwpn7q/image/upload/v1734375799/eehanee/807899038176362627_nlbqk0.png"
         alt="Space launch"
         start={0}
         end={200}
