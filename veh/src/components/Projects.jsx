@@ -25,7 +25,7 @@ const HomeNavigation = () => {
 
   return (
     <div className="home-navigation" onClick={() => navigate("/")}>
-      Home
+      <p>Home</p>
     </div>
   );
 };
