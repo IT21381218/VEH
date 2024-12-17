@@ -55,8 +55,6 @@
     transition: transform 0.4s ease-in-out; /* Transition for the line's scale */
 }
 
-
-
 .follow-me li:hover a {
     opacity: 0.8; /* Slightly reduce opacity on hover */
     animation: bounce 0.6s ease-out forwards; /* Add a bouncing effect */
@@ -78,5 +76,58 @@
     }
     100% {
         transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Media Queries for responsiveness */
+
+/* For max-width 1200px */
+@media (max-width: 1200px) {
+    .follow-me {
+        padding-left: 50px; /* Adjust left padding */
+    }
+
+    .follow-me a {
+        font-size: 7rem; /* Smaller font size */
+    }
+
+    .follow-me li {
+        margin: -20px 0; /* Adjust margin */
+    }
+}
+
+/* For max-width 768px (Tablets and below) */
+@media (max-width: 768px) {
+    .follow-me {
+        padding-left: 30px; /* Further reduce left padding */
+    }
+
+    .follow-me a {
+        font-size: 7rem; /* Smaller font size */
+    }
+
+    .follow-me li {
+        margin: -15px 0; /* Adjust margin */
+    }
+}
+
+/* For max-width 480px (Mobile devices) */
+@media (max-width: 480px) {
+    .follow-me {
+        padding-left: 0px; /* Further reduce left padding */
+        align-items: center; /* Center the items on smaller screens */
+    }
+
+    .follow-me a {
+        font-size: 3rem; /* Even smaller font size */
+    }
+
+    .follow-me li {
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .follow-me ul {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
     }
 }
