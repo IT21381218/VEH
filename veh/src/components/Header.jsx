@@ -30,6 +30,7 @@ function Header() {
           <li onClick={() => handleClick('timeline')}>Experiences</li>
           <li onClick={() => handleClick('skills')}>Skills</li>
           <li onClick={() => handleClick('contact')}>Contact</li>
+          <li onClick={() => handleClick('follow-me')}>Follow Me</li>
           <li onClick={() => navigate('/projects')}>Projects</li>
         </ul>
       </nav>

@@ -5,19 +5,20 @@ import Skills from './Skills';
 import Contact from './Contact';
 import Top from './Top';
 import Timeline from './Timeline';
+import FollowMe from './FollowMe';  // Import FollowMe component
 import './styles/Home.css';
 
 function Home() {
   useEffect(() => {
     // Scroll to the top when the component is mounted
     window.scrollTo(0, 0);
-   }, []);
+  }, []);
 
   const [currentSection, setCurrentSection] = useState('top');
 
   // Handle Scroll
   const handleScroll = () => {
-    const sections = ['top', 'about', 'timeline', 'skills', 'contact'];
+    const sections = ['top', 'about', 'timeline', 'skills', 'follow-me', 'contact'];
     let current = null;
 
     sections.forEach((id) => {
@@ -82,6 +83,12 @@ function Home() {
         id="contact" 
         className={currentSection === 'contact' ? 'slide-in' : ''}>
         <Contact />
+      </section>
+
+      <section 
+        id="follow-me" 
+        className={currentSection === 'follow-me' ? 'slide-in' : ''}>
+        <FollowMe />
       </section>
     </div>
   );
